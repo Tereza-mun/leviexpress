@@ -3,17 +3,17 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
-// import { Reservation } from './Reservation';
-// import { Home } from './Home';
+import Reservation from './Reservation';
+import Home from './Home';
 import './style.css';
 
 const App = () => {
   return (
-    // <Router>
-    <div>
-      <Header />
+    <Router>
+      <div>
+        <Header />
 
-      {/* <Switch>
+        <Switch>
           <Route path="/reservation">
             <Reservation />
           </Route>
@@ -21,11 +21,11 @@ const App = () => {
           <Route path="/">
             <Home />
           </Route>
-        </Switch> */}
+        </Switch>
 
-      <Footer />
-    </div>
-    // </Router>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
