@@ -22,7 +22,7 @@ body {
   margin-left: auto;
 }
 
-header,
+/* header,
 footer {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -34,7 +34,7 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
-}
+} */
 
 h2 {
   font-size: 1.5rem;
