@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './style.css';
-import mapImage from './img/map.svg';
+import React, { useState, useEffect } from "react";
+import "./style.css";
+import mapImage from "./img/map.svg";
 
 const CityOptions = ({ cities }) => {
   return (
@@ -20,43 +20,48 @@ const DatesOptions = ({ dates }) => {
   return (
     <>
       <option value="">Vyberte</option>
-      {dates.map((date) => {
-        <option key={date}>{date}</option>;
-      })}
+      {dates.map((date) => (
+        <option key={date.dateBasic} value={date.dateBasic}>
+          {date.dateBasic}
+        </option>
+      ))}
+      ;
     </>
   );
 };
 
 const JourneyPicker = () => {
-  const [fromCity, setFromCity] = useState('');
-  const [toCity, setToCity] = useState('');
-  const [date, setDate] = useState('');
+  const [fromCity, setFromCity] = useState("");
+  const [toCity, setToCity] = useState("");
+  const [date, setDate] = useState("");
   const [cities, setCities] = useState([]);
   const [dates, setDates] = useState([]);
 
   useEffect(() => {
-    fetch('https://leviexpress-backend.herokuapp.com/api/cities')
+    fetch("https://leviexpress-backend.herokuapp.com/api/cities")
       .then((resp) => resp.json())
-      .then((json) => console.log(json.data));
+      .then((json) => setCities(json.data));
   }, []);
 
   useEffect(() => {
-    fetch('https://leviexpress-backend.herokuapp.com/api/dates')
+    fetch("https://leviexpress-backend.herokuapp.com/api/dates")
       .then((resp) => resp.json())
-      .then((json) => console.log(json.data));
+      .then((json) => setDates(json.data));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Odesilam formular s cestou');
-    console.log(fromCity);
-    console.log(toCity);
-    console.log(date);
+
     fetch(
       `https://leviexpress-backend.herokuapp.com/api/journey?fromCity=${fromCity}&toCity=${toCity}&date=${date}`,
     )
       .then((resp) => resp.json())
       .then((json) => console.log(json.data));
+
+    console.log("Odesilam formular s cestou");
+    console.log(fromCity);
+    console.log(toCity);
+    console.log(date);
   };
 
   const handleFromCityChange = (e) => {
