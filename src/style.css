@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #444;
 }
 
@@ -147,7 +147,7 @@ label {
   padding: 2rem;
 }
 
-.bus-stop {
+/* .bus-stop {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -180,7 +180,7 @@ label {
 
 .bus-stop__city {
   font-weight: bold;
-}
+} */
 
 .stops {
   margin-top: 2rem;
@@ -232,7 +232,7 @@ label {
 
 .seat__number {
   fill: currentColor;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 36px;
 }
 
