@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import JourneyPicker from "./Journey picker";
 import JourneyDetail from "./JourneyDetail";
+import SeatPicker from "./SeatPicker";
 import "./style.css";
 
 const Home = () => {
   const [journey, setJourney] = useState(null);
   const handleJourneyChange = (props) => {
     setJourney(props);
-    console.log(props);
   };
   return (
     <>
@@ -15,7 +15,12 @@ const Home = () => {
       <JourneyPicker onJourneyChange={handleJourneyChange} />
       {/* {" "}
       {journey ? `Nalezeno spojení is id ${journey.journeyId}` : null} */}
-      {journey && <JourneyDetail journey={journey} />}
+      {journey && (
+        <>
+          <JourneyDetail journey={journey} />
+          <SeatPicker />
+        </>
+      )}
     </>
   );
 };

@@ -190,7 +190,7 @@ label {
   padding: 2rem;
 }
 
-.seat {
+/* .seat {
   border: none;
   padding: 0;
   background-color: transparent;
@@ -209,7 +209,7 @@ label {
 .seat__in {
   width: 3rem;
   height: 3rem;
-}
+} */
 
 .reservation {
   width: 25rem;
