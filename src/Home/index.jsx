@@ -11,10 +11,7 @@ const Home = () => {
   };
   return (
     <>
-      {console.log(journey)}
       <JourneyPicker onJourneyChange={handleJourneyChange} />
-      {/* {" "}
-      {journey ? `Nalezeno spojení is id ${journey.journeyId}` : null} */}
       {journey && (
         <>
           <JourneyDetail journey={journey} />

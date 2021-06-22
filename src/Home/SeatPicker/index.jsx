@@ -12,17 +12,6 @@ const SeatPicker = ({ isOccupied, seats, journeyId }) => {
   const history = useHistory();
   const handleBuy = () => {
     history.push("/reservation");
-    // fetch(
-    //   `https:/leviexpress-backend.herokuapp.com/api/reserve?seat=${seats}&journeyId=${journeyId}`,
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   },
-    // )
-    //   .then((resp) => resp.json())
-    //   .then((json) => history.push("/reservation"));
   };
 
   return (

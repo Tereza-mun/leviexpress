@@ -57,11 +57,6 @@ const JourneyPicker = ({ onJourneyChange }) => {
     )
       .then((resp) => resp.json())
       .then((json) => onJourneyChange(json.data));
-
-    console.log("Odesilam formular s cestou");
-    console.log(fromCity);
-    console.log(toCity);
-    console.log(date);
   };
 
   const handleFromCityChange = (e) => {
