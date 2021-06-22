@@ -3,7 +3,7 @@ import "./style.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const Reservation = ({ date, fromCity, toCity }) => {
+const Reservation = () => {
   const [reservation, setReservation] = useState(null);
 
   const { id } = useParams();
@@ -28,16 +28,16 @@ const Reservation = ({ date, fromCity, toCity }) => {
             </div>
             <div className="reservation__body__data">
               <p>
-                <strong>{date}</strong>
+                <strong>22.6.2021</strong>
               </p>
               <p>
-                <strong>{fromCity}</strong>
+                <strong>Brno</strong>
               </p>
               <p>
-                <strong>{toCity}</strong>
+                <strong>Eindhoven</strong>
               </p>
               <p>
-                <strong>{selectedSeatNumber}</strong>
+                <strong>3</strong>
               </p>
             </div>
           </div>

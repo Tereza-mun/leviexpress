@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Seat from "../Seat";
 import "./style.css";
 
-const SeatPicker = ({ isOccupied, journeyId }) => {
+const SeatPicker = ({ isOccupied, seats, journeyId }) => {
   const [selectedSeatNumber, setSelectedSeatNumber] = useState(null);
 
   const handleSeatSelect = (number) => {
@@ -12,7 +12,7 @@ const SeatPicker = ({ isOccupied, journeyId }) => {
   const history = useHistory();
   const handleBuy = () => {
     fetch(
-      `https:/leviexpress-backend.herokuapp.com/api/reserve?seat=${selectedSeatNumber}&journeyId=${journeyId}`,
+      `https:/leviexpress-backend.herokuapp.com/api/reserve?seat=${seats}&journeyId=${journeyId}`,
       {
         method: "POST",
         headers: {

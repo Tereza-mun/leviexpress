@@ -18,7 +18,7 @@ const Home = () => {
       {journey && (
         <>
           <JourneyDetail journey={journey} />
-          <SeatPicker />
+          <SeatPicker seats={journey.seats} journeyId={journey.journeyId} />
         </>
       )}
     </>
