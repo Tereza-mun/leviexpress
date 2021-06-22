@@ -21,7 +21,7 @@ const SeatPicker = ({ isOccupied, seats, journeyId }) => {
       },
     )
       .then((resp) => resp.json())
-      .then((json) => history.push(`/reservation/${json.data.reservationId}`));
+      .then((json) => history.push("/reservation"));
   };
 
   return (
